@@ -27306,7 +27306,7 @@ function getUserAgent() {
  * @param {string} [userAgent=navigator.userAgent]
  * @returns {?string} browser - "chrome", "firefox", "safari", or null
  */
-function guessBrowser(userAgent) {
+ function guessBrowser(userAgent) {
   if (typeof userAgent === 'undefined') {
     userAgent = getUserAgent();
   }
@@ -27316,7 +27316,7 @@ function guessBrowser(userAgent) {
   if (/Firefox|FxiOS/.test(userAgent)) {
     return 'firefox';
   }
-  if (/Safari/.test(userAgent)) {
+  if (/Safari|iPhone|iPad/.test(userAgent)) {
     return 'safari';
   }
   return null;
@@ -27929,30 +27929,29 @@ exports.updateUnifiedPlanTrackIdsToSSRCs = updateUnifiedPlanTrackIdsToSSRCs;
 
 },{"./":164}],167:[function(require,module,exports){
 module.exports={
-  "_from": "@twilio/webrtc@4.5.1",
+  "_from": "git+https://github.com/nikolapeevski-mentormate/twilio-webrtc.js.git#2f490be89f131c84588a7a487d2b39e84fb73ea0",
   "_id": "@twilio/webrtc@4.5.1",
   "_inBundle": false,
-  "_integrity": "sha512-0GwnffxJ71jm/7sYD8MYHzZRCR59p7KYqiMO8/Fmny7S4L0s8Ms36ghUUfCE7x/XuWjAC4FU6L/DkFN1Ewuu8Q==",
+  "_integrity": "",
   "_location": "/@twilio/webrtc",
   "_phantomChildren": {},
   "_requested": {
-    "type": "version",
-    "registry": true,
-    "raw": "@twilio/webrtc@4.5.1",
+    "type": "git",
+    "raw": "@twilio/webrtc@git+https://github.com/nikolapeevski-mentormate/twilio-webrtc.js.git#2f490be89f131c84588a7a487d2b39e84fb73ea0",
     "name": "@twilio/webrtc",
     "escapedName": "@twilio%2fwebrtc",
     "scope": "@twilio",
-    "rawSpec": "4.5.1",
-    "saveSpec": null,
-    "fetchSpec": "4.5.1"
+    "rawSpec": "git+https://github.com/nikolapeevski-mentormate/twilio-webrtc.js.git#2f490be89f131c84588a7a487d2b39e84fb73ea0",
+    "saveSpec": "git+https://github.com/nikolapeevski-mentormate/twilio-webrtc.js.git#2f490be89f131c84588a7a487d2b39e84fb73ea0",
+    "fetchSpec": "https://github.com/nikolapeevski-mentormate/twilio-webrtc.js.git",
+    "gitCommittish": "2f490be89f131c84588a7a487d2b39e84fb73ea0"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@twilio/webrtc/-/webrtc-4.5.1.tgz",
-  "_shasum": "9a69b8f3709624b215e9481097626b1d3ae879ba",
-  "_spec": "@twilio/webrtc@4.5.1",
-  "_where": "/home/circleci/project",
+  "_resolved": "git+https://github.com/nikolapeevski-mentormate/twilio-webrtc.js.git#2f490be89f131c84588a7a487d2b39e84fb73ea0",
+  "_spec": "@twilio/webrtc@git+https://github.com/nikolapeevski-mentormate/twilio-webrtc.js.git#2f490be89f131c84588a7a487d2b39e84fb73ea0",
+  "_where": "/Users/nikola.peevski/Repos/twilio-video.js",
   "author": {
     "name": "Manjesh Malavalli",
     "email": "mmalavalli@twilio.com"
@@ -28579,7 +28578,7 @@ if ($defineProperty) {
 
 var GetIntrinsic = require('get-intrinsic');
 
-var $gOPD = GetIntrinsic('%Object.getOwnPropertyDescriptor%');
+var $gOPD = GetIntrinsic('%Object.getOwnPropertyDescriptor%', true);
 if ($gOPD) {
 	try {
 		$gOPD([], 'length');
@@ -31328,13 +31327,13 @@ module.exports={
     "build:js": "node ./scripts/build.js ./src/twilio-video.js ./LICENSE.md ./dist/twilio-video.js",
     "build:min.js": "uglifyjs ./dist/twilio-video.js -o ./dist/twilio-video.min.js --comments \"/^! twilio-video.js/\" -b beautify=false,ascii_only=true",
     "build": "npm-run-all clean lint docs test:unit test:integration build:es5 build:js build:min.js test:umd",
-    "build:quick": "npm-run-all clean lint docs build:es5 build:js build:min.js",
+    "build:quick": "npm-run-all clean build:es5 build:js build:min.js",
     "docs": "node ./scripts/docs.js ./dist/docs",
     "watch": "tsc -w",
     "clean": "rimraf ./coverage ./es5 ./dist"
   },
   "dependencies": {
-    "@twilio/webrtc": "4.5.1",
+    "@twilio/webrtc": "https://github.com/nikolapeevski-mentormate/twilio-webrtc.js#2f490be89f131c84588a7a487d2b39e84fb73ea0",
     "backoff": "^2.5.0",
     "ws": "^7.4.6",
     "xmlhttprequest": "^1.8.0"
