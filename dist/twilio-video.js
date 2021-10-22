@@ -27929,7 +27929,7 @@ exports.updateUnifiedPlanTrackIdsToSSRCs = updateUnifiedPlanTrackIdsToSSRCs;
 
 },{"./":164}],167:[function(require,module,exports){
 module.exports={
-  "_from": "git+https://github.com/nikolapeevski-mentormate/twilio-webrtc.js.git#2f490be89f131c84588a7a487d2b39e84fb73ea0",
+  "_from": "git+https://github.com/nikolapeevski-mentormate/twilio-webrtc.js.git#d5cb7ececec025307128a2a9df36c120bef80f86",
   "_id": "@twilio/webrtc@4.5.1",
   "_inBundle": false,
   "_integrity": "",
@@ -27937,20 +27937,20 @@ module.exports={
   "_phantomChildren": {},
   "_requested": {
     "type": "git",
-    "raw": "@twilio/webrtc@git+https://github.com/nikolapeevski-mentormate/twilio-webrtc.js.git#2f490be89f131c84588a7a487d2b39e84fb73ea0",
+    "raw": "@twilio/webrtc@git+https://github.com/nikolapeevski-mentormate/twilio-webrtc.js.git#d5cb7ececec025307128a2a9df36c120bef80f86",
     "name": "@twilio/webrtc",
     "escapedName": "@twilio%2fwebrtc",
     "scope": "@twilio",
-    "rawSpec": "git+https://github.com/nikolapeevski-mentormate/twilio-webrtc.js.git#2f490be89f131c84588a7a487d2b39e84fb73ea0",
-    "saveSpec": "git+https://github.com/nikolapeevski-mentormate/twilio-webrtc.js.git#2f490be89f131c84588a7a487d2b39e84fb73ea0",
+    "rawSpec": "git+https://github.com/nikolapeevski-mentormate/twilio-webrtc.js.git#d5cb7ececec025307128a2a9df36c120bef80f86",
+    "saveSpec": "git+https://github.com/nikolapeevski-mentormate/twilio-webrtc.js.git#d5cb7ececec025307128a2a9df36c120bef80f86",
     "fetchSpec": "https://github.com/nikolapeevski-mentormate/twilio-webrtc.js.git",
-    "gitCommittish": "2f490be89f131c84588a7a487d2b39e84fb73ea0"
+    "gitCommittish": "d5cb7ececec025307128a2a9df36c120bef80f86"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "git+https://github.com/nikolapeevski-mentormate/twilio-webrtc.js.git#2f490be89f131c84588a7a487d2b39e84fb73ea0",
-  "_spec": "@twilio/webrtc@git+https://github.com/nikolapeevski-mentormate/twilio-webrtc.js.git#2f490be89f131c84588a7a487d2b39e84fb73ea0",
+  "_resolved": "git+https://github.com/nikolapeevski-mentormate/twilio-webrtc.js.git#d5cb7ececec025307128a2a9df36c120bef80f86",
+  "_spec": "@twilio/webrtc@git+https://github.com/nikolapeevski-mentormate/twilio-webrtc.js.git#d5cb7ececec025307128a2a9df36c120bef80f86",
   "_where": "/Users/nikola.peevski/Repos/twilio-video.js",
   "author": {
     "name": "Manjesh Malavalli",
@@ -28000,7 +28000,7 @@ module.exports={
     "simple-git": "^2.4.0",
     "twilio-release-tool": "^1.0.0",
     "watchify": "^4.0.0",
-    "webrtc-adapter": "^6.4.8"
+    "webrtc-adapter": "8.1.0"
   },
   "homepage": "https://github.com/twilio/twilio-webrtc.js#readme",
   "keywords": [
@@ -31333,7 +31333,7 @@ module.exports={
     "clean": "rimraf ./coverage ./es5 ./dist"
   },
   "dependencies": {
-    "@twilio/webrtc": "https://github.com/nikolapeevski-mentormate/twilio-webrtc.js#2f490be89f131c84588a7a487d2b39e84fb73ea0",
+    "@twilio/webrtc": "https://github.com/nikolapeevski-mentormate/twilio-webrtc.js#d5cb7ececec025307128a2a9df36c120bef80f86",
     "backoff": "^2.5.0",
     "ws": "^7.4.6",
     "xmlhttprequest": "^1.8.0"
