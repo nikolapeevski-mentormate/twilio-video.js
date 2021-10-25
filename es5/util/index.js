@@ -50,13 +50,13 @@ function asLocalTrack(track, options) {
     if (track) {
         return track;
     }
-    // if (track instanceof options.MediaStreamTrack) {
-    return track.kind === 'audio'
-        ? new options.LocalAudioTrack(track, options)
-        : new options.LocalVideoTrack(track, options);
-    // }
+    if (track instanceof options.MediaStreamTrack) {
+        return track.kind === 'audio'
+            ? new options.LocalAudioTrack(track, options)
+            : new options.LocalVideoTrack(track, options);
+    }
     /* eslint new-cap:0 */
-    // throw E.INVALID_TYPE('track', 'LocalAudioTrack, LocalVideoTrack, LocalDataTrack, or MediaStreamTrack');
+    throw E.INVALID_TYPE('track', 'LocalAudioTrack, LocalVideoTrack, LocalDataTrack, or MediaStreamTrack');
 }
 /**
  * Create a new {@link LocalTrackPublication} for the given {@link LocalTrack}.
