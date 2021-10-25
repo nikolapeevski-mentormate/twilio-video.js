@@ -183,7 +183,7 @@ var MediaTrack = /** @class */ (function (_super) {
     MediaTrack.prototype._attach = function (el, mediaStreamTrack) {
         if (mediaStreamTrack === void 0) { mediaStreamTrack = this.processedTrack || this.mediaStreamTrack; }
         var mediaStream = el.srcObject;
-        if (!(mediaStream instanceof this._MediaStream)) {
+        if (!mediaStream) {
             mediaStream = new this._MediaStream();
         }
         var getTracks = mediaStreamTrack.kind === 'audio'
@@ -259,7 +259,7 @@ var MediaTrack = /** @class */ (function (_super) {
             return el;
         }
         var mediaStream = el.srcObject;
-        if (mediaStream instanceof this._MediaStream) {
+        if (!mediaStream) {
             mediaStream.removeTrack(this.processedTrack || this.mediaStreamTrack);
         }
         this._attachments.delete(el);

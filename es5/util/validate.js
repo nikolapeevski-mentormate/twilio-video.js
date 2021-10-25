@@ -45,10 +45,7 @@ function validateBandwidthProfile(bandwidthProfile) {
  * @param {object} options
  */
 function validateLocalTrack(track, options) {
-    if (!(track instanceof options.LocalAudioTrack
-        || track instanceof options.LocalDataTrack
-        || track instanceof options.LocalVideoTrack
-        || track instanceof options.MediaStreamTrack)) {
+    if (!track) {
         /* eslint new-cap:0 */
         throw E.INVALID_TYPE('track', 'LocalAudioTrack, LocalVideoTrack, LocalDataTrack, or MediaStreamTrack');
     }
