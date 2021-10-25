@@ -47,7 +47,9 @@ var util = require('@twilio/webrtc/lib/util');
  * @throws {TypeError}
  */
 function asLocalTrack(track, options) {
-    if (track) {
+    if (track instanceof options.LocalAudioTrack
+        || track instanceof options.LocalVideoTrack
+        || track instanceof options.LocalDataTrack) {
         return track;
     }
     if (track instanceof options.MediaStreamTrack) {

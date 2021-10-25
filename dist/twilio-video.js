@@ -4193,7 +4193,7 @@ var MediaTrack = /** @class */ (function (_super) {
     MediaTrack.prototype._attach = function (el, mediaStreamTrack) {
         if (mediaStreamTrack === void 0) { mediaStreamTrack = this.processedTrack || this.mediaStreamTrack; }
         var mediaStream = el.srcObject;
-        if (!mediaStream) {
+        if (!(mediaStream instanceof this._MediaStream)) {
             mediaStream = new this._MediaStream();
         }
         var getTracks = mediaStreamTrack.kind === 'audio'
@@ -4269,7 +4269,7 @@ var MediaTrack = /** @class */ (function (_super) {
             return el;
         }
         var mediaStream = el.srcObject;
-        if (!mediaStream) {
+        if (mediaStream instanceof this._MediaStream) {
             mediaStream.removeTrack(this.processedTrack || this.mediaStreamTrack);
         }
         this._attachments.delete(el);
@@ -19981,7 +19981,9 @@ var util = require('@twilio/webrtc/lib/util');
  * @throws {TypeError}
  */
 function asLocalTrack(track, options) {
-    if (track) {
+    if (track instanceof options.LocalAudioTrack
+        || track instanceof options.LocalVideoTrack
+        || track instanceof options.LocalDataTrack) {
         return track;
     }
     if (track instanceof options.MediaStreamTrack) {
@@ -24193,7 +24195,10 @@ function validateBandwidthProfile(bandwidthProfile) {
  * @param {object} options
  */
 function validateLocalTrack(track, options) {
-    if (!track) {
+    if (!(track instanceof options.LocalAudioTrack
+        || track instanceof options.LocalDataTrack
+        || track instanceof options.LocalVideoTrack
+        || track instanceof options.MediaStreamTrack)) {
         /* eslint new-cap:0 */
         throw E.INVALID_TYPE('track', 'LocalAudioTrack, LocalVideoTrack, LocalDataTrack, or MediaStreamTrack');
     }
