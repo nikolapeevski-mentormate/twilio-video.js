@@ -45,10 +45,10 @@ function validateBandwidthProfile(bandwidthProfile) {
  * @param {object} options
  */
 function validateLocalTrack(track, options) {
-    if (!track) {
-        /* eslint new-cap:0 */
-        throw E.INVALID_TYPE('track', 'LocalAudioTrack, LocalVideoTrack, LocalDataTrack, or MediaStreamTrack');
-    }
+    // if (!track) {
+    /* eslint new-cap:0 */
+    // throw E.INVALID_TYPE('track', 'LocalAudioTrack, LocalVideoTrack, LocalDataTrack, or MediaStreamTrack');
+    // }
 }
 /**
  * Validate an object. An object is valid if it is undefined or a non-null, non-array
